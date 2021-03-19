@@ -27,6 +27,7 @@ export default function Home({ allPostsData }) {
         <meta name="twitter:title" content={Title} />
         <meta name="twitter:description" content={Description} />
       </Head>
+      
       <h1>Homepage. This is the homepage.</h1>
       <section>
         <h2>Blog</h2>

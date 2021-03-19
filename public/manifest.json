@@ -1,0 +1,32 @@
+{
+  "name": "Byer Co Next JS Starter Pack",
+  "short_name": "Byer Starter",
+  "lang": "EN-US",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "98x98"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    }
+  ]
+}
