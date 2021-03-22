@@ -4,7 +4,34 @@ import Footer from './Footer';
 import Head from 'next/head';
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Raleway:300|Playfair+Display:400');
+  :root {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+  }
+  html[data-theme='light'] {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+  }
+  html[data-theme='dark'] {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+  }
+  @media (prefers-color-scheme: dark)  {
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
+  }
   html {font-size: 100%;box-sizing:border-box;} /*16px*/
   *, *:before, *:after {
     box-sizing:inherit;
@@ -12,17 +39,31 @@ const GlobalStyles = createGlobalStyle`
     padding:0;
   }
   body {
-    background: white;
+    background: var(--bg-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     line-height: 1.75;
-    color: #000000;
+    color: var(--font-color);
   }
-  a{
+  a {
+    position: relative;
     text-decoration:none;
+    color: var(--secondary-color);
+  }
+  a::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    right: 0px;
+    bottom: -3px;
+    left: 0px;
+    background-color: var(--primary-color);
   }
   a:hover{
-    text-decoration: underline;
+    color: var(--primary-color);
+    &::before {
+      background: linear-gradient(to right, var(--secondary-color) 40%, var(--primary-color) 75%);
+    }
   }
   button {
     font-family: 'Raleway', sans-serif;
@@ -36,10 +77,6 @@ const GlobalStyles = createGlobalStyle`
   }
   h1 {
     margin-top: 0;
-    font-size: 11.089rem;
-  }
-  h1 {
-    margin-top: 0;
     font-size: 5.653rem;
   }
   h2 {font-size: 3.998rem;}
@@ -47,12 +84,44 @@ const GlobalStyles = createGlobalStyle`
   h4 {font-size: 1.999rem;}
   h5 {font-size: 1.414rem;}
   small, .text_small {font-size: 0.707rem;}
+  .hero {
+    display: block;
+    padding: 5rem;
+  }
+  .wrapper { margin: 1rem; }
+  .container { max-width: 1600px; margin: 0 auto; }
+  section { padding: 3rem 0; }
+  section.contrast {
+    background-color: var(--secondary-color);
+  }
+  .btn {
+    background: linear-gradient(to right, var(--primary-color) 40%, var(--primary-color) 75%);
+    color: var(--bg-color);
+    border: 3px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 300ms;
+    ::before {
+      content: "";
+      position: absolute;
+      height: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background-color: none;
+    }
+    :hover{
+      color: var(--text-color);
+      background: linear-gradient(to right, var(--secondary-color) 40%, var(--primary-color) 75%);
+    }
+  }
 `;
 
 export default function Page({children, title}){
   return(
     <>
       <Head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,6 +137,8 @@ export default function Page({children, title}){
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-status-bar" content="#000000" />
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Raleway:300|Playfair+Display:400&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300|Playfair+Display:400&display=swap" media="print" onLoad="this.media='all'" />
       </Head>
       <div className="wrapper">
         <GlobalStyles />

@@ -8,7 +8,7 @@ const HeaderStyles = styled.header`
 
 export default function Header(){
     return(
-        <HeaderStyles>
+        <HeaderStyles className="wrapper">
             <Nav />
         </HeaderStyles>
     )

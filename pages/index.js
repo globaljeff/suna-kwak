@@ -27,21 +27,36 @@ export default function Home({ allPostsData }) {
         <meta name="twitter:title" content={Title} />
         <meta name="twitter:description" content={Description} />
       </Head>
+      <div className="hero">
+        <div className="wrapper">
+          <h1>Homepage SEO Title H1.</h1>
+          <p>The intro short text to support the title tag.</p>
+          <a href="#" className="btn btn-primary">Primary Button</a>
+        </div>
+      </div>
       
-      <h1>Homepage. This is the homepage.</h1>
+      <section className="contrast">
+        <div className="container">
+          <h2>Header 2 Section Title</h2>
+          <p>Supporting paragraph to header title or sections for cutom grid layout.</p>
+        </div>
+      </section>
+
       <section>
-        <h2>Blog</h2>
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              {title}
-              <br />
-              {id}
-              <br />
-              {date}
-            </li>
-          ))}
-        </ul>
+        <div className="container">
+          <h2>Blog</h2>
+          <ul>
+            {allPostsData.map(({ id, date, title }) => (
+              <li key={id}>
+                {title}
+                <br />
+                {id}
+                <br />
+                {date}
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </>
   )
