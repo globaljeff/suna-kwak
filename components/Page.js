@@ -5,10 +5,10 @@ import Head from 'next/head';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --primary-color: #9A97F3;
-    --secondary-color: #818cab;
-    --font-color: #e1e1ff;
-    --bg-color: #161625;
+    --primary-color: #C7B59F;
+    --secondary-color: #C7B59F;
+    --font-color: #000000;
+    --bg-color: #ffffff;
     --heading-color: #818cab;
   }
   html[data-theme='light'] {
@@ -40,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background: var(--bg-color);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Bicyclette', sans-serif;
     font-weight: 300;
     line-height: 1.75;
     color: var(--font-color);
@@ -48,30 +48,22 @@ const GlobalStyles = createGlobalStyle`
   a {
     position: relative;
     text-decoration:none;
-    color: var(--secondary-color);
-  }
-  a::before {
-    content: "";
-    position: absolute;
-    height: 3px;
-    right: 0px;
-    bottom: -3px;
-    left: 0px;
-    background-color: var(--primary-color);
+    color: var(--font-color);
   }
   a:hover{
-    color: var(--primary-color);
+    //color: var(--primary-color);
+    text-decoration:underline;
     &::before {
       background: linear-gradient(to right, var(--secondary-color) 40%, var(--primary-color) 75%);
     }
   }
   button {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Bicyclette', sans-serif;
   }
   p {margin-bottom: 1rem;}
   h1, h2, h3, h4, h5 {
     margin: 3rem 0 1.38rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Bicyclette', serif;
     font-weight: 400;
     line-height: 1.3;
   }
@@ -95,12 +87,14 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--secondary-color);
   }
   .btn {
-    background: linear-gradient(to right, var(--primary-color) 40%, var(--primary-color) 75%);
-    color: var(--bg-color);
-    border: 3px solid var(--secondary-color);
-    padding: 1rem;
-    border-radius: 12px;
+    background: white;
+    color: var(--font-color);
+    border: 1px solid var(--font-color);
+    padding: .4rem 2rem;
+    border-radius: 30px;
     transition: all 300ms;
+    text-transform:uppercase;
+    letter-spacing:.1rem;
     ::before {
       content: "";
       position: absolute;
@@ -112,7 +106,12 @@ const GlobalStyles = createGlobalStyle`
     }
     :hover{
       color: var(--text-color);
-      background: linear-gradient(to right, var(--secondary-color) 40%, var(--primary-color) 75%);
+      cursor:pointer;
+    }
+  }
+  .social{
+    img{
+      width:33px;
     }
   }
 `;
