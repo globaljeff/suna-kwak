@@ -2,7 +2,8 @@ import Link from "next/link"
 import styled from "styled-components"
 
 const StyledFooter = styled.footer`
-  display:flex;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content:space-between;
   padding-top:50px;
   margin:50px auto 0;
@@ -20,13 +21,19 @@ const StyledFooter = styled.footer`
     text-transform:uppercase;
   }
   .signature a{
-    font-size:1.2rem;
+    font-family: 'vintage';
+    line-height: 1;
+    font-size: 2.2rem;
+    text-transform: none;
 
     &:after{
       content:url("/img/motif-2.svg");
       display:block;
       text-align:center;
     }
+  }
+  .social {
+    text-align: right;
   }
   @media (max-width:600px){
     display:block;
@@ -39,7 +46,7 @@ export default function Footer(){
     <div className="container">
       <StyledFooter>
         <div className="signature">
-          <Link href="/"><a><storng>SUNA KWAK</storng></a></Link>
+          <Link href="/"><a>Suna Kwak</a></Link>
         </div>
         <div className="text-center">
           <div className="links">
@@ -47,11 +54,9 @@ export default function Footer(){
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
           </div>
-          <p><a href="mailto:sunakwak@me.com">sunakwak@me.com</a> | <a href="tel:13103397100">1.310.339.7100</a></p>
         </div>
         <div className="social">
-          <a href="youtube.com" target="_blank" rel="noopener"><img src="/img/youtube-logo.png" alt="youtube" /></a>
-          <a href="facebook.com" target="_blank" rel="noopener"><img src="/img/facebook-logo.png" alt="youtube" /></a>
+          <p><a href="mailto:sunakwak@me.com">sunakwak@me.com</a> | <a href="tel:13103397100">1.310.339.7100</a></p>
         </div>
       </StyledFooter>
     </div>

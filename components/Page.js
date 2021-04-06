@@ -4,6 +4,13 @@ import Footer from './Footer';
 import Head from 'next/head';
 
 const GlobalStyles = createGlobalStyle`
+  @font-face {
+    font-family: 'vintage';
+    src: url('/font/vintagestyleregular-yzjkj-webfont.woff2') format('woff2'),
+          url('/font/vintagestyleregular-yzjkj-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
   :root {
     --primary-color: #C7B59F;
     --secondary-color: #C7B59F;

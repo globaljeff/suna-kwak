@@ -9,15 +9,25 @@ const StyledNav = styled.nav`
     display: inline-block;
     margin: 1rem;
     color: var(--font-color);
+    transition: all 300ms;
   }
-  h1{
-    text-transform:uppercase;
-    font-weight:bold;
-
+  .mobile-menu-btn {
+    width: 66px;
+    margin: 1rem 0 0 0;
+  }
+  .brand{
+    font-family: 'vintage';
+    font-size: 5.653rem;
+    line-height: 1;
+    margin: 0 auto;
+    padding-left: 66px;
     @media (max-width:900px){
-      font-size:2rem;
+      font-size:3rem;
+      line-height: 1;
+      margin-top: 1rem;
     }
   }
+  
   @media (max-width:525px){
     .social{
       display:none;
@@ -55,12 +65,8 @@ export default function Nav(){
     
     return (
         <StyledNav>
-            <div className="social">
-              <a href="youtube.com" target="_blank" rel="noopener"><img src="/img/youtube-logo.png" alt="youtube" /></a>
-              <a href="facebook.com" target="_blank" rel="noopener"><img src="/img/facebook-logo.png" alt="youtube" /></a>
-            </div>
-            
-            <Link href="/"><a><h1>Suna Kwak</h1></a></Link>
+
+            <Link href="/"><a className="brand">Suna Kwak</a></Link>
             <Link href="javascript:;"><a className="mobile-menu-btn"><img src="/img/menu-motif.svg" alt="menu" /></a></Link>
 
             <div className="mobile-drawer">
@@ -75,10 +81,6 @@ export default function Nav(){
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
               <Link href="/contact">Contact</Link>
-              <div className="social">
-                <a href="youtube.com" target="_blank" rel="noopener"><img src="/img/youtube-logo.png" alt="youtube" /></a>
-                <a href="facebook.com" target="_blank" rel="noopener"><img src="/img/facebook-logo.png" alt="youtube" /></a>
-              </div>
             </div>
 
             <script dangerouslySetInnerHTML={{ __html: `
