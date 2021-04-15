@@ -56,7 +56,7 @@ export default function Footer(){
           </div>
         </div>
         <div className="social">
-          <p><a href="mailto:sunakwak@me.com">sunakwak@me.com</a> | <a href="tel:13103397100">1.310.339.7100</a></p>
+          <p><a href="mailto:sunakwak@me.com">sunakwak@me.com</a> | <a href="tel:+13103397100">1.310.339.7100</a></p>
         </div>
       </StyledFooter>
     </div>

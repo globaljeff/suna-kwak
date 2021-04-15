@@ -1,52 +1,17 @@
 import Head from 'next/head'
-import styled from "styled-components"
+import WorkStyles from '../../components/styles/WorkStyles'
 import Link from "next/link"
 
-const Title = "Suna Kwak"
-const Description = "Suna Kwak, wardrobe stylist"
-const URL = "https://www.byer.co/"
+/* Work details */
+const vTitle = "Drake From State Farm"
+const vDirector = "Erich Joiner"
+const vClient = "State Farm"
+const vLink = "https://www.youtube.com/embed/aKg66q1zEuw"
 
-const WorkStyles = styled.div`
-    display:flex;
-    align-items:center;
-    @media (max-width:800px){
-        display:block;
-    }
-    & > div{
-        flex:1;
-        img{
-            width:100%;
-        }
-    }
-    h2{
-        font-size:2rem;
-        margin:0;
-        text-transform:uppercase;
-        font-weight:bold;
-    }
-    h3{
-        font-size:1.3rem;
-        margin:0;
-        text-transform:uppercase;
-        margin-bottom:40px;
-    }
-    .work-text{
-        padding-left:50px;
-        @media (max-width:800px){
-            padding-left:0;
-        }
-    }
-    a{
-        text-transform:uppercase;
-    }
-    .buttons{
-        margin:40px 0;
-        .btn{
-            display:inline-block;
-            margin-right:20px;
-        }
-    }
-`;
+const Title = vTitle + " - Wardrobe Stylist - Suna Kwak"
+const Description = "Suna Kwak was the wardobe stylist for the " + vTitle + " commercial directed by " + vDirector + " for " + vClient + "."
+const URL = "https://www.sunakwak.com/work/drake-from-state-farm"
+
 
 export default function WorkPage(){
     return(
@@ -65,11 +30,14 @@ export default function WorkPage(){
             <div className="container">
                 <WorkStyles>
                     <div>
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/aKg66q1zEuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="480" src={vLink} title={vTitle} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div className="work-text">
-                        <h2>Drake From State Farm</h2>
-                        <h3>State Farm</h3>
+                        <h1>{vTitle}</h1>
+                        <h2>Director: {vDirector}</h2>
+                        <h3>Client: {vClient}</h3>
+                        <p>{Description}</p>
+                        
                         <div className="buttons">
                             <Link href="/work/capital-one-spectacle"><a className="btn">&lt; Last</a></Link>
                             <Link href="/work/frito-lay-twas-the-night-before-superbowl"><a className="btn">Next &gt;</a></Link>

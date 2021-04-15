@@ -65,7 +65,7 @@ export default function WorkPage(){
             <div className="container">
                 <WorkStyles>
                     <div>
-                    <img src="/img/video-placeholder.jpg" alt="video here" />
+                    <iframe width="100%" height="480" src="https://www.youtube.com/embed/Mn8P_KvBSeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div className="work-text">
                         <h2>Spectacle</h2>
