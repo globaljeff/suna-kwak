@@ -25,12 +25,6 @@ const StyledFooter = styled.footer`
     line-height: 1;
     font-size: 2.2rem;
     text-transform: none;
-
-    &:after{
-      content:url("/img/motif-2.svg");
-      display:block;
-      text-align:center;
-    }
   }
   .social {
     text-align: right;
@@ -49,11 +43,7 @@ export default function Footer(){
           <Link href="/"><a>Suna Kwak</a></Link>
         </div>
         <div className="text-center">
-          <div className="links">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
-          </div>
+
         </div>
         <div className="social">
           <p><a href="mailto:sunakwak@me.com">sunakwak@me.com</a> | <a href="tel:+13103397100">1.310.339.7100</a></p>

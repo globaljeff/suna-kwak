@@ -1,33 +1,6 @@
 import Head from 'next/head'
-import { getSortedPostsData } from '../lib/posts'
 import styled from "styled-components"
 import Link from "next/link"
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
-
-const HeroStyled = styled.div`
-  .text-center{
-    text-align:center;
-    h2{
-      font-size:1rem;
-      text-transform:uppercase;
-      margin:0;
-      font-weight:bold;
-
-      &:after{
-        content:url("/img/motif-1.svg");
-        display:block;
-      }
-    }
-  }
-`;
 
 const Work = styled.div`
   display:flex;
@@ -40,7 +13,7 @@ const Work = styled.div`
     min-width:200px;
     position:relative;
     overflow:hidden;
-    height:182px;
+    height:207px;
     img{
       width:100%;
       display:block;
@@ -53,7 +26,6 @@ const Work = styled.div`
     &:hover .work-info{
       top:0;
     }
-    
     .work-info{
       width:100%;
       height:100%;
@@ -86,13 +58,18 @@ const Work = styled.div`
       }
     }
   }
+  @media (max-width:525px){
+    .work-item {
+      width: 100%;
+    }
+  }
 `;
 
 const Title = "Suna Kwak"
 const Description = "Suna Kwak, wardrobe stylist"
-const URL = "https://www.byer.co/"
+const URL = "https://www.sunakwak.com/"
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -106,15 +83,10 @@ export default function Home({ allPostsData }) {
         <meta name="twitter:description" content={Description} />
       </Head>
       <div className="container">
-        <HeroStyled>
-          <div className="wrapper text-center">
-            <h2>Wardrobe Stylist</h2>
-          </div>
-        </HeroStyled>
         <Work>
           <Link href="/work/capital-one-spectacle">
             <div className="work-item">
-              <img src="/img/sam-jackson.jpg" alt="Capital One - Spectacle" />
+              <img src="/img/capital-one-spectacle.jpg" alt="Capital One - Spectacle" />
               <div className="work-info">
                 <div className="work-text">
                   <p>Spectacle</p>
@@ -226,7 +198,7 @@ export default function Home({ allPostsData }) {
 
           <Link href="/work/att-1">
             <div className="work-item">
-              <img src="/img/att-1.jpeg" alt="AT&T - One" />
+              <img src="/img/at&t-1.jpg" alt="AT&T - One" />
               <div className="work-info">
                 <div className="work-text">
                   <p>AT&amp;T (1)</p>
@@ -237,7 +209,7 @@ export default function Home({ allPostsData }) {
           </Link>
           <Link href="/work/att-2">
             <div className="work-item">
-              <img src="/img/att-2.jpeg" alt="AT&T - Two" />
+              <img src="/img/at&t-2.jpg" alt="AT&T - Two" />
               <div className="work-info">
                 <div className="work-text">
                   <p>AT&amp;T (2)</p>
@@ -293,7 +265,7 @@ export default function Home({ allPostsData }) {
           </Link>
           <Link href="/work/mercedes-male-world">
             <div className="work-item">
-              <img src="/img/mercedes-male-world.jpeg" alt="Mercedes - Male World" />
+              <img src="/img/mercedes-mans-world.jpg" alt="Mercedes - Male World" />
               <div className="work-info">
                 <div className="work-text">
                   <p>Male World</p>
@@ -316,7 +288,7 @@ export default function Home({ allPostsData }) {
           </Link>
           <Link href="/work/nike-football-is-everything-1">
             <div className="work-item">
-              <img src="/img/nike-football-is-everything-1.jpeg" alt="Nike - Football is everything (1)" />
+              <img src="/img/nike-football-1.jpg" alt="Nike - Football is everything (1)" />
               <div className="work-info">
                 <div className="work-text">
                   <p>Football is Everything (1)</p>
@@ -327,7 +299,7 @@ export default function Home({ allPostsData }) {
           </Link>
           <Link href="/work/nike-football-is-everything-2">
             <div className="work-item">
-              <img src="/img/nike-football-is-everything-2.jpeg" alt="Nike - Football is everything (2)" />
+              <img src="/img/nike-football-2.jpg" alt="Nike - Football is everything (2)" />
               <div className="work-info">
                 <div className="work-text">
                   <p>Football is Everything (2)</p>
@@ -350,7 +322,7 @@ export default function Home({ allPostsData }) {
 
           <Link href="/work/nike-the-black-mamba">
             <div className="work-item">
-              <img src="/img/nike-the-black-mamba.jpeg" alt="Nike - The Blank Mamba" />
+              <img src="/img/nike-mamba.jpg" alt="Nike - The Blank Mamba" />
               <div className="work-info">
                 <div className="work-text">
                   <p>The Black Mamba</p>
@@ -372,7 +344,7 @@ export default function Home({ allPostsData }) {
           </Link>
           <Link href="/work/mercedes-smart-saves-the-city">
             <div className="work-item">
-              <img src="/img/mercedes-smart-saves-the-city.jpeg" alt="Mercedes - Smart saves the city" />
+              <img src="/img/mercedes-smart.jpg" alt="Mercedes - Smart saves the city" />
               <div className="work-info">
                 <div className="work-text">
                   <p>Smart Saves the City</p>

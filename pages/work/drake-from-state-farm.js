@@ -36,7 +36,6 @@ export default function WorkPage(){
                         <h1>{vTitle}</h1>
                         <h2>Director: {vDirector}</h2>
                         <h3>Client: {vClient}</h3>
-                        <p>{Description}</p>
                         
                         <div className="buttons">
                             <Link href="/work/capital-one-spectacle"><a className="btn">&lt; Last</a></Link>
