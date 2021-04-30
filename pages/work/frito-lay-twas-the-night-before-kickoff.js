@@ -4,14 +4,13 @@ import Link from "next/link"
 
 /* Work details */
 const vTitle = "Twas the Night before Kickoff"
-const vDirector = " "
+const vDirector = "Peter Berg"
 const vClient = "Frito-Lay"
 const vLink = "https://www.youtube.com/embed/3M2sq6mwbik"
 
 const Title = vTitle + " - Wardrobe Stylist - Suna Kwak"
 const Description = "Suna Kwak was the wardobe stylist for the " + vTitle + " commercial directed by " + vDirector + " for " + vClient + "."
 const URL = "https://www.sunakwak.com/work/frito-lay-twas-the-night-before-kickoff"
-
 
 export default function WorkPage(){
     return(

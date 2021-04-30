@@ -4,7 +4,7 @@ import Link from "next/link"
 
 /* Work details */
 const vTitle = "Twas the Night before Superbowl"
-const vDirector = " "
+const vDirector = "Peter Berg"
 const vClient = "Frito-Lay"
 const vLink = "https://www.youtube.com/embed/yYVUfAhcX4E"
 
