@@ -1,6 +1,8 @@
-# Byer Company Next JS Starter Project
+# Suna Kwak
 
 Built by [Byer Co Web Design](https://www.byer.co).
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d9d4f976-efe7-4049-9984-77cad1767993/deploy-status)](https://app.netlify.com/sites/sunakwak/deploys)
 
 ## Usage
 
