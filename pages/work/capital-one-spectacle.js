@@ -6,7 +6,7 @@ import Link from "next/link"
 const vTitle = "Spectacle"
 const vDirector = "Spike Lee"
 const vClient = "Capital One"
-const vLink = "https://www.youtube.com/embed/Mn8P_KvBSeM"
+const vLink = "https://player.vimeo.com/video/564787458"
 
 const Title = vTitle + " - Wardrobe Stylist - Suna Kwak"
 const Description = "Suna Kwak was the wardobe stylist for the " + vTitle + " commercial directed by " + vDirector + " for " + vClient + "."

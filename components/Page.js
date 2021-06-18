@@ -7,7 +7,7 @@ export default function Page({children}){
   return(
     <>
       <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,8 +23,7 @@ export default function Page({children}){
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-status-bar" content="#000000" />
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Raleway:300|Playfair+Display:400&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300|Playfair+Display:400&display=swap" media="print" onLoad="this.media='all'" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet" /> 
       </Head>
       <div className="wrapper">
         <GlobalStyles />

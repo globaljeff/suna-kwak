@@ -44,8 +44,9 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background: var(--bg-color);
-    font-family: 'Bicyclette', sans-serif;
-    font-weight: 300;
+    // font-family: 'Bicyclette', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     line-height: 1.75;
     color: var(--font-color);
   }
@@ -62,12 +63,12 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   button {
-    font-family: 'Bicyclette', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
   p {margin-bottom: 1rem;}
   h1, h2, h3, h4, h5 {
     margin: 3rem 0 1.38rem;
-    font-family: 'Bicyclette', serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     line-height: 1.3;
   }
